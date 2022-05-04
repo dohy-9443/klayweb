@@ -5,7 +5,7 @@ import styled from "styled-components";
 const MainPage = () => {
   return (
     <Layout>
-      <DIV></DIV>
+      <DIV>ss</DIV>
     </Layout>
   );
 };
