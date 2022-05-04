@@ -5,6 +5,7 @@ import * as S from "./style";
 const Box = ({ percent }) => {
   return (
     <S.Border percent={percent * 0.01}>
+      ssssssssssssssss
       <S.DIV>{percent}%</S.DIV>
     </S.Border>
   );

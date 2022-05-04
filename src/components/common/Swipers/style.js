@@ -1,0 +1,25 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  width: 100%;
+  height: 500px;
+  background: blue;
+  color: #fff;
+
+  & .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const ImgBox = styled.div`
+  width: 100%;
+  height: 100%;
+
+  & img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;

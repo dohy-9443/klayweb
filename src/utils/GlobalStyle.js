@@ -71,7 +71,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Pretendard";
+    /* @media screen and (max-width:)  */
+    
   }
+  
 
   
 `;
