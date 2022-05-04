@@ -8,9 +8,11 @@ const Layout = ({ children }) => {
   return (
     <S.Container>
       <S.Blur>
-        <Header />
-        {children}
-        <Footer />
+        <S.DIV>
+          <Header />
+          {children}
+          <Footer />
+        </S.DIV>
       </S.Blur>
     </S.Container>
   );

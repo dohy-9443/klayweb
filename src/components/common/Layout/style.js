@@ -50,3 +50,9 @@ export const Blur = styled.div`
   backdrop-filter: blur(340px);
   z-index: 2;
 `;
+
+export const DIV = styled.div`
+  width: 100%;
+  position: relative;
+  z-index: 3;
+`;
