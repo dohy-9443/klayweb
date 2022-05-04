@@ -1,9 +1,11 @@
 //react
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <S.Container>
@@ -28,7 +30,7 @@ const Header = () => {
                 <S.Span>BREEDING</S.Span>
               </S.Li>
             </S.Left>
-            <S.Right>
+            <S.Right onClick={() => navigate(`/connect`)}>
               <S.Btn>
                 <span>CONNECT</span>
               </S.Btn>

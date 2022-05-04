@@ -21,6 +21,7 @@ export default function App() {
       <>
         <Routes>
           <Route path="/" element={<Pages.MainPage />} />
+          <Route path="/connect" element={<Pages.ConnectPage />} />
         </Routes>
       </>
     </>
