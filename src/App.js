@@ -21,7 +21,6 @@ export default function App() {
       <>
         <Routes>
           <Route path="/" element={<Pages.MainPage />} />
-          <Route path="/sub" element={<Pages.SubPage />} />
         </Routes>
       </>
     </>

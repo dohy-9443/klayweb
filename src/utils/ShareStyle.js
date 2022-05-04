@@ -1,28 +1,55 @@
 import styled, { css } from "styled-components";
 import { M } from "./MT";
 
-// 이거는 진짜 모든 페이지의 버튼이나 인풋들이 공통일 경우나 비슷할 경우에만 사용해주세요.
-// 여기서 스타일링 하시고 필요한 파일에서 import 하시고
-
-// const DIV = styled.div`
-//   ${footBtnStyle}
-//   color: #FF0000;
-// `;
-
-// 위와같이 작성하시면 됩니다. 스타일이 조금 다를 경우에는 위와같이 해당 스타일 밑에 추가로 작성하시면
-// 위에서 아래로 읽히니까 아래 스타일에 맞춰 덮어쓰기되니 유용하게 잘 사용해주세요!
-
-export const footBtnStyle = css`
+export const connect = css`
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(to right, #86ffca, #45ca8a, #03b68b);
+  /* position: relative; */
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: "NanumBarunGothicBold";
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.6s;
 
-  @media screen and (max-width: 500px) {
-    font-size: ${M(20)};
+  & div {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    border-radius: 100px;
+    /* transform: translate(-50%, -50%); */
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.6s;
+  }
+
+  & div span {
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(
+      90.48deg,
+      #86ffca 0.24%,
+      #45ca8a 52.29%,
+      #03b68b 99.58%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.6s;
+  }
+
+  &:hover div {
+    background: linear-gradient(to right, #86ffca, #45ca8a, #03b68b);
+  }
+
+  &:hover span {
+    background: transparent;
+    -webkit-text-fill-color: #fff;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
   }
 `;
 

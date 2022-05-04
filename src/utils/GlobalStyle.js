@@ -5,19 +5,72 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
 
   :root {
-    --red: #ff0000;
-    --orange: #fca400;
-    --yellow: #ffff0f;
-    --green: #00ff00;
-    --blue: #0000ff;
-    --navy: #000080;
-    --purple: #cd55ff;
+    --main: #00FFD1;
+    --white: #ffffff;
+    --gray: #666666;
+    --title: #999999;
+    --text: #dddddd;
+  }
+  
+  @font-face {
+    font-family: "BlackHanSans";
+    font-weight: 400;
+    src:
+      url("/assets/font/BlackHanSans-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    src:
+      url("/assets/font/Pretendard-ExtraLight.otf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    src:
+      url("/assets/font/Pretendard-Light.otf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    src:
+      url("/assets/font/Pretendard-Regular.otf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    src:
+      url("/assets/font/Pretendard-Medium.otf");
+  }
+
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    src:
+      url("/assets/font/Pretendard-SemiBold.otf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    src:
+      url("/assets/font/Pretendard-Bold.otf");
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    src:
+      url("/assets/font/Pretendard-ExtraBold.otf");
   }
 
   body {
-    background:#000;
-    padding: 10px;
-    /* font-family: '어쩌구'; */
+    font-family: "Pretendard";
   }
 
   
