@@ -2,11 +2,19 @@ import React from "react";
 
 import * as S from "./style";
 
-const Box = ({ percent }) => {
+const Box = ({ percent, text, check }) => {
   return (
     <S.Border percent={percent * 0.01}>
-      ssssssssssssssss
-      <S.DIV>{percent}%</S.DIV>
+      <S.PerText percent={percent * 0.01} check={check}>
+        {check ? (
+          <S.ImgBox>
+            <img src="/assets/img/icon/ch.svg" alt="" />
+          </S.ImgBox>
+        ) : (
+          percent + "%"
+        )}
+      </S.PerText>
+      <S.DIV>{text}</S.DIV>
     </S.Border>
   );
 };

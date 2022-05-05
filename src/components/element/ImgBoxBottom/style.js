@@ -1,0 +1,54 @@
+import styled from "styled-components";
+
+export const ImgBox = styled.div`
+  width: 323px;
+  height: 323px;
+  position: relative;
+  margin: 3%;
+  cursor: pointer;
+  &:hover {
+    transition: 0.4s;
+    transform: scale(1.2);
+  }
+
+  &:hover:after {
+    content: "";
+    transition: 0.4s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 65%;
+    height: 65%;
+    background: linear-gradient(90.97deg, #5dffce 0%, #00c2ff 100%);
+    filter: blur(74px);
+    border-radius: 50%;
+  }
+  & img {
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const TextBox = styled.div`
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+  & p {
+    font-family: "BlackHanSans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+  & span {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+  }
+`;
