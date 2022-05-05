@@ -12,6 +12,9 @@ export const Wrap = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 1500px) {
+    padding: 0 calc(100vw * (140 / 1500));
+  }
 `;
 
 export const Inner = styled.div`
@@ -28,6 +31,7 @@ export const Left = styled.ul`
 
 export const Li = styled.li`
   margin-right: 100px;
+
   cursor: pointer;
 
   &:nth-last-of-type(1) {
@@ -36,6 +40,26 @@ export const Li = styled.li`
 
   &:nth-of-type(1) {
     margin-right: 140px;
+    @media only screen and (max-width: 1300px) {
+      margin-right: calc(100vw * (140 / 1300));
+    }
+    @media only screen and (max-width: 1100px) {
+      margin-right: calc(100vw * (100 / 1100));
+    }
+    @media only screen and (max-width: 900px) {
+      margin-right: calc(100vw * (40 / 900));
+    }
+  }
+
+  @media only screen and (max-width: 1300px) {
+    margin-right: calc(100vw * (100 / 1300));
+  }
+  @media only screen and (max-width: 1100px) {
+    margin-right: calc(100vw * (60 / 1100));
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin-right: calc(100vw * (40 / 900));
   }
 `;
 

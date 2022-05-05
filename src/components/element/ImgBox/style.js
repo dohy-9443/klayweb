@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ImgBox = styled.div`
-  width: 442px;
-  height: 442px;
+  /* width: 442px; */
+  /* height: 442px; */
+  width: 92%;
+  height: 92%;
   position: relative;
   margin: 3%;
 

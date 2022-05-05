@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ImgBox = styled.div`
-  width: 323px;
+  /* width: 323px; */
   height: 323px;
+  width: 92%;
+  height: 92%;
   position: relative;
   margin: 3%;
   cursor: pointer;
@@ -36,6 +38,9 @@ export const TextBox = styled.div`
   text-align: center;
   color: #fff;
   margin-top: 40px;
+  @media only screen and (max-width: 1920px) {
+    margin-top: calc(100vw * (40 / 1920));
+  }
   & p {
     font-family: "BlackHanSans";
     font-style: normal;

@@ -79,25 +79,12 @@ const MainPage = () => {
   const modulesOpt = {
     speed: 5000,
     slidesPerView: 4, // 한 슬라이드당 보여줄 slide 갯수
-    // spaceBetween: 30, // 슬라이드 사이의 간격
     loop: true, // 슬라이드 반복 (기본값 false)
     autoplay: {
       //   //자동 재생 5초,
       delay: 0,
       disableOnInteraction: false, //false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
     },
-    // breakpoints: {
-    //   // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
-    //   360: {
-    //     slidesPerView: 1,
-    //   },
-    //   768: {
-    //     slidesPerView: 2,
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //   },
-    // },
   };
 
   // section E Items
@@ -267,23 +254,26 @@ const MainPage = () => {
   ]);
 
   const modulesOpt2 = {
-    slidesPerView: 5, // 한 슬라이드당 보여줄 slide 갯수
+    // slidesPerView: 5, // 한 슬라이드당 보여줄 slide 갯수
     spaceBetween: 50, // 슬라이드 사이의 간격
 
     loop: true, // 슬라이드 반복 (기본값 false)
 
-    // breakpoints: {
-    //   // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
-    //   360: {
-    //     slidesPerView: 1,
-    //   },
-    //   768: {
-    //     slidesPerView: 2,
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //   },
-    // },
+    breakpoints: {
+      // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
+      360: {
+        slidesPerView: 3,
+      },
+      // 768: {
+      // slidesPerView: 4,
+      // },
+      1000: {
+        slidesPerView: 4,
+      },
+      1290: {
+        slidesPerView: 5,
+      },
+    },
   };
 
   const containerStyle = {
@@ -360,7 +350,8 @@ const MainPage = () => {
                 autoPlay
                 playsInline
                 loop
-                src="/assets/vedio/main_video.mp4"
+                // src="/assets/vedio/main_video.mp4"
+                src="/assets/vedio/main_video2.mp4"
                 // src="/assets/vedio/main_video_mov.mov"
                 // src="/assets/vedio/main_video_mov.mp4"
                 type="video/mp4"
@@ -496,7 +487,8 @@ const SecTitle = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 26px;
+  /* line-height: 26px; */
+  line-height: 1.5;
   text-align: center;
   color: #999999;
   margin-bottom: 118px;
@@ -510,6 +502,9 @@ const ListText = styled.div`
 
   text-align: center;
   margin-bottom: 10px;
+  @media only screen and (max-width: 1250px) {
+    font-size: calc(100vw * (15 / 1250));
+  }
 `;
 
 const DIV = styled.div`
@@ -524,19 +519,32 @@ const FlexDIV = styled.div`
 const FlexDIVA = styled(FlexDIV)`
   width: 579px;
   align-items: flex-start;
-  margin-top: 187px;
-  margin-left: 220px;
+  /* margin-top: 187px; */
+  margin-top: 9.5%;
+  /* margin-left: 220px; */
+  margin-left: 11%;
 `;
 const Section = styled.section`
   width: 100%;
   margin-bottom: 346px;
+
+  @media only screen and (max-width: 1920px) {
+    margin-bottom: calc(100vw * (346 / 1920));
+  }
 `;
 const SectionA = styled(Section)`
   width: 100%;
   margin-bottom: 14px;
 `;
 const SectionB = styled(Section)``;
-const ImgCon = styled.div``;
+const ImgCon = styled.div`
+  /* width: 79%; */
+  width: calc(100vw * (460 / 1920));
+  max-width: 460px;
+  & img {
+    width: 100%;
+  }
+`;
 const SecDImgBox = styled.div`
   width: 950px;
   height: 950px;
@@ -546,15 +554,27 @@ const SecDImgBox = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media only screen and (max-width: 1250px) {
+    width: calc(100vw * (950 / 1250));
+    height: calc(100vw * (950 / 1250));
+  }
 `;
 const TextWrap = styled.div`
+  @media only screen and (max-width: 1600px) {
+    width: 80%;
+  }
   & p {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 100;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 1.5;
     color: var(--white);
+    margin-right: 10px;
+    @media only screen and (max-width: 1600px) {
+      font-size: calc(100vw * (16 / 1600));
+    }
   }
 `;
 const SectionC = styled(Section)``;
@@ -568,6 +588,9 @@ const PerDiv = styled.div`
   margin: 0 auto;
   flex-wrap: wrap;
   padding-top: 100px;
+  @media only screen and (max-width: 1250px) {
+    max-width: calc(100vw * (1128 / 1250));
+  }
 `;
 const SectionF = styled(Section)``;
 
@@ -575,7 +598,8 @@ const SnsWrapper = styled.div`
   margin: 55px 0px 14px 0px;
 `;
 const VideoBox = styled(DIV)`
-  width: 896px;
+  width: 47%;
+  margin-left: 10px;
 `;
 const Video = styled.video`
   width: 100%;
@@ -604,6 +628,13 @@ const PartImgCon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  & img {
+    width: 71%;
+    height: 100%;
+  }
+  @media only screen and (max-width: 1920px) {
+    height: calc(100vw * (180 / 1920));
+  }
 `;
 
 export const Right = styled.div`

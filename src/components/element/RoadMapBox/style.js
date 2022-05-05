@@ -15,6 +15,10 @@ export const Border = styled.div`
   color: #ffffff;
   margin-bottom: 168px;
   position: relative;
+  @media only screen and (max-width: 1250px) {
+    width: calc(100vw * (343 / 1220));
+    height: calc(100vw * (343 / 1220));
+  }
 `;
 
 export const DIV = styled.div`
@@ -46,9 +50,19 @@ export const PerText = styled.div`
   font-style: normal;
   font-weight: 900;
   font-size: 100px;
+  @media only screen and (max-width:1250px){
+    font-size: calc(100vw*(100/1250));
+  }
 `;
 
 export const ImgBox = styled.div`
   width: 83px;
   height: 83px;
+  & img {
+    width: 100%;
+  }
+  @media only screen and (max-width: 1250px) {
+    width: calc(100vw * (83 / 1250));
+    height: calc(100vw * (83 / 1250));
+  }
 `;

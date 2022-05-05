@@ -49,7 +49,11 @@ export const Container = styled.div`
 export const Blur = styled.div`
   position: relative;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(255, 255, 255, 0.05); */
+  background: linear-gradient(
+    rgba(8 8 8 / 0%) 15%,
+    rgba(255, 255, 255, 0.05) 23%
+  );
   backdrop-filter: blur(340px);
   z-index: 2;
 `;
@@ -58,4 +62,6 @@ export const DIV = styled.div`
   width: 100%;
   position: relative;
   z-index: 3;
+  max-width: 1920px;
+  margin: 0 auto;
 `;
