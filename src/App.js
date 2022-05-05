@@ -26,6 +26,8 @@ export default function App() {
           <Route path="/connect" element={<Pages.ConnectPage />} />
           {/* mining 페이지 (main -> klc) */}
           <Route path="/mining" element={<Pages.MiningPage />} />
+          {/* lionsball 페이지 (mmining -> lionsball) */}
+          <Route path="/lionsball" element={<Pages.LionsBallPage />} />
         </Routes>
       </>
     </>
