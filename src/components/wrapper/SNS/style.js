@@ -16,6 +16,7 @@ export const SNS = styled.li`
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+  cursor: pointer;
 
   &:nth-last-of-type(1) {
     margin-right: 0;

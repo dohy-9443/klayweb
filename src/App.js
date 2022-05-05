@@ -20,8 +20,12 @@ export default function App() {
       <ScrollToTop />
       <>
         <Routes>
+          {/* Main */}
           <Route path="/" element={<Pages.MainPage />} />
+          {/* connect ( 지갑연결 ) */}
           <Route path="/connect" element={<Pages.ConnectPage />} />
+          {/* mining 페이지 (main -> klc) */}
+          <Route path="/mining" element={<Pages.MiningPage />} />
         </Routes>
       </>
     </>
