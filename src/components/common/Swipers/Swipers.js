@@ -22,12 +22,15 @@ export default function Swipers({ ...props }) {
         <Swiper
           {...props.modules}
           style={props.containerStyle}
-          className={props.className}
+          // className={props.className}
         >
           {props.data &&
-            props.data.map((item) => {
+            props.data?.map((item, index) => {
+              // {
+              //   console.log("??", item, index);
+              // }
               return (
-                <SwiperSlide style={props.slideStyle}>
+                <SwiperSlide style={props.slideStyle} key={index}>
                   {React.cloneElement(props.component, {
                     data: item,
                   })}

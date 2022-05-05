@@ -23,6 +23,7 @@ export const Container = styled.div`
     bottom: 332px;
     opacity: 0.6;
     z-index: 1;
+    filter: blur(340px);
   }
 
   &::after {
@@ -41,15 +42,16 @@ export const Container = styled.div`
     bottom: -159px;
     opacity: 0.3;
     z-index: 1;
+    filter: blur(340px);
   }
 `;
 
 export const Blur = styled.div`
-  position: relative;
+  /* position: relative;
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(340px);
-  z-index: 2;
+  z-index: 2; */
 `;
 
 export const DIV = styled.div`

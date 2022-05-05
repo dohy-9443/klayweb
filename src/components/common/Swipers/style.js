@@ -2,9 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 500px;
-  background: blue;
-  color: #fff;
 
   & .swiper-container {
     width: 100%;
