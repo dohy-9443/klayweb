@@ -47,11 +47,11 @@ export const Container = styled.div`
 `;
 
 export const Blur = styled.div`
-  /* position: relative;
+  position: relative;
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(340px);
-  z-index: 2; */
+  z-index: 2;
 `;
 
 export const DIV = styled.div`

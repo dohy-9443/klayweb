@@ -9,6 +9,9 @@ import {
 } from "../../components";
 import { connect } from "../../utils/ShareStyle";
 import styled from "styled-components";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 const MainPage = () => {
   // section C Items
   const [imgList, setImgList] = useState([
@@ -331,6 +334,10 @@ const MainPage = () => {
     },
   ]);
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <Layout>
       <Container>
@@ -354,6 +361,8 @@ const MainPage = () => {
                 playsInline
                 loop
                 src="/assets/vedio/main_video.mp4"
+                // src="/assets/vedio/main_video_mov.mov"
+                // src="/assets/vedio/main_video_mov.mp4"
                 type="video/mp4"
               ></Video>
             </VideoBox>
@@ -376,7 +385,12 @@ const MainPage = () => {
           </FlexDIV>
         </SectionB>
 
-        <SectionC>
+        <SectionC
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="2000"
+        >
           <SecTitle>Klay Liones</SecTitle>
           <SwDiv>
             <Swipers
@@ -388,14 +402,23 @@ const MainPage = () => {
               className={"www"}
             />
           </SwDiv>
-          <Right>
+          <Right
+            onClick={() => {
+              window.open("https://opensea.io/collection/klay-lions", "_blank");
+            }}
+          >
             <Btn>
               <span>BUY ON OPENSEA</span>
             </Btn>
           </Right>
         </SectionC>
 
-        <SectionD>
+        <SectionD
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="2000"
+        >
           <SecTitle>About KLC (Klay LionsCoin)</SecTitle>
           <SecDImgBox>
             <img src="/assets/img/character/character_1.png" alt="" />
@@ -417,9 +440,19 @@ const MainPage = () => {
           </PerDiv>
         </SectionE>
 
-        <SectionF>
+        <SectionF
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="5000"
+        >
           <SecTitle>About Team</SecTitle>
-          <SwDiv>
+          <SwDiv
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-delay="200"
+            data-aos-duration="2000"
+          >
             <Swipers
               data={teamList}
               modules={modulesOpt2}
@@ -431,7 +464,11 @@ const MainPage = () => {
           </SwDiv>
         </SectionF>
 
-        <SectionG>
+        <SectionG
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="2000"
+        >
           <SecTitle>Klaylions Partner</SecTitle>
 
           <PartnerDIV>
@@ -530,6 +567,7 @@ const PerDiv = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   flex-wrap: wrap;
+  padding-top: 100px;
 `;
 const SectionF = styled(Section)``;
 
