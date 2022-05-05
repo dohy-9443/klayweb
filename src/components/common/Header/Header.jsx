@@ -12,15 +12,15 @@ const Header = () => {
         <S.Wrap>
           <S.Inner>
             <S.Left>
-              <S.Li>
+              <S.Li onClick={() => navigate("/")}>
                 <S.Img>
                   <img src="/assets/img/logo.png" alt="logo" />
                 </S.Img>
               </S.Li>
-              <S.Li>
+              <S.Li onClick={() => navigate("/")}>
                 <S.Span>MAIN</S.Span>
               </S.Li>
-              <S.Li>
+              <S.Li onClick={() => navigate("/mining")}>
                 <S.Span>KLC</S.Span>
               </S.Li>
               <S.Li>

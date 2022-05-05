@@ -28,6 +28,7 @@ export const Left = styled.ul`
 
 export const Li = styled.li`
   margin-right: 100px;
+  cursor: pointer;
 
   &:nth-last-of-type(1) {
     margin-right: 0;
@@ -35,13 +36,6 @@ export const Li = styled.li`
 
   &:nth-of-type(1) {
     margin-right: 140px;
-  }
-
-  &:nth-child(2) span {
-    color: var(--main);
-  }
-  &:nth-child(3) span {
-    color: var(--white);
   }
 `;
 
@@ -60,7 +54,29 @@ export const Span = styled.span`
   display: block;
   font-weight: 500;
   font-size: 16px;
-  color: var(--gray);
+
+  ${({ active, disabled }) => {
+    if (active) {
+      return `color: var(--main);`;
+    } else if (disabled) {
+      return `color: var(--gray);`;
+    } else if (!disabled && !active) {
+      return `color: var(--white);`;
+    }
+  }}
+`;
+
+export const SubLi = styled.li`
+  margin-right: 100px;
+  cursor: pointer;
+
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  &:nth-of-type(1) {
+    margin-right: 140px;
+  }
 `;
 
 export const Right = styled.div`
@@ -72,4 +88,17 @@ export const Right = styled.div`
 export const Btn = styled.div`
   width: 173px;
   height: 47px;
+`;
+
+export const WalletId = styled.h2`
+  font-weight: 700;
+  font-size: 16px;
+  background: linear-gradient(
+    90.48deg,
+    #86ffca 0.24%,
+    #45ca8a 52.29%,
+    #03b68b 99.58%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;

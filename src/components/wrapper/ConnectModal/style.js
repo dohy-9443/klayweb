@@ -116,7 +116,7 @@ export const Btn = styled.button`
       #86ffca 0.24%,
       #45ca8a 52.29%,
       #03b68b 99.58%
-    );-webkit-background-clip: text; -webkit-text-fill-color: transparent;`}
+    ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;`}
   }
 
   &:nth-last-of-type(1) {
