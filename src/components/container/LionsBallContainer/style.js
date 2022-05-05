@@ -12,11 +12,11 @@ export const Wrap = styled.div`
 export const Img = styled.div`
   width: 812px;
   height: 695px;
-  margin: 92px 0 150px auto;
+  margin: 92px 62px 150px auto;
 
   & img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 `;

@@ -10,7 +10,7 @@ const LionsBallContainer = () => {
       <S.Wrap>
         <LionsBallTop />
         <S.Img>
-          <img src="/assets/img/rule.png" alt="" />
+          <img src="/assets/img/rule2.png" alt="" />
         </S.Img>
         <LionsBallWrap />
       </S.Wrap>
