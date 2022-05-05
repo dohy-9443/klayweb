@@ -14,12 +14,6 @@ export const miningData = [
   { id: 13, isActive: false },
   { id: 14, isActive: false },
   { id: 15, isActive: false },
-  { id: 10, isActive: false },
-  { id: 11, isActive: false },
-  { id: 12, isActive: false },
-  { id: 13, isActive: false },
-  { id: 14, isActive: false },
-  { id: 15, isActive: false },
 ];
 
 export const miningData2 = [

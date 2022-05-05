@@ -7,12 +7,16 @@ const SubHeader = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  React.useEffect(() => {
+    console.log(pathname);
+  }, []);
+
   const Titles = [
-    { id: 1, text: "STAKING", link: "", disabled: false },
+    { id: 1, text: "STAKING", disabled: false },
     { id: 2, text: "MINING", link: "/mining", disabled: false },
     { id: 3, text: "LIONS BALL", link: "/lionsball", disabled: false },
-    { id: 4, text: "VOTE", link: "", disabled: true },
-    { id: 5, text: "MINIGAME", link: "", disabled: true },
+    { id: 4, text: "VOTE", disabled: true },
+    { id: 5, text: "MINIGAME", disabled: true },
   ];
 
   return (
@@ -29,7 +33,7 @@ const SubHeader = () => {
               {Titles.map((item) => (
                 <S.Li key={item.id} onClick={() => navigate(item.link)}>
                   <S.Span
-                    active={pathname === item.link}
+                    active={item.link && pathname === item.link}
                     disabled={item.disabled}
                   >
                     {item.text}

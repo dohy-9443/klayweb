@@ -75,6 +75,7 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   & span {
     font-weight: 700;

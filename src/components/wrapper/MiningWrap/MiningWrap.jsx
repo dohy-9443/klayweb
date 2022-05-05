@@ -2,11 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 
 import * as S from "./style";
 
-import { StartBox } from "../..";
+import { StartBox, UnMiningModal } from "../..";
 import { miningData2 } from "../../../mock/miningDummy";
 const MiningWrap = () => {
   const [list, setList] = useState([]);
   const [total, setTotal] = useState(0);
+  const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     setList(miningData2);
@@ -24,6 +25,7 @@ const MiningWrap = () => {
 
   return (
     <S.Container>
+      <UnMiningModal closeModal={() => setIsModal(false)} onModal={isModal} />
       <S.Top>
         <S.H2>MINING~</S.H2>
         <S.Icon>
@@ -47,7 +49,7 @@ const MiningWrap = () => {
             Option <span>{total}</span>
           </S.Left>
         </div>
-        <S.Right>
+        <S.Right onClick={() => setIsModal(true)}>
           <span>UNMINING</span>
         </S.Right>
       </S.Bottom>

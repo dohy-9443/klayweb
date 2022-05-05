@@ -37,13 +37,6 @@ export const Li = styled.li`
   &:nth-of-type(1) {
     margin-right: 140px;
   }
-
-  &:nth-child(2) span {
-    color: var(--main);
-  }
-  &:nth-child(3) span {
-    color: var(--white);
-  }
 `;
 
 export const Img = styled.div`
@@ -63,10 +56,10 @@ export const Span = styled.span`
   font-size: 16px;
 
   ${({ active, disabled }) => {
-    if (disabled) {
-      return `color: var(--gray);`;
-    } else if (active) {
+    if (active) {
       return `color: var(--main);`;
+    } else if (disabled) {
+      return `color: var(--gray);`;
     } else if (!disabled && !active) {
       return `color: var(--white);`;
     }
