@@ -49,11 +49,18 @@ export const TextBox = styled.div`
     line-height: 26px;
     text-align: center;
     margin-bottom: 7px;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(100vw * (12 / 428));
+      line-height: 1.2;
+    }
   }
   & span {
     font-weight: 100;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(100vw * (12 / 428));
+    }
   }
 `;

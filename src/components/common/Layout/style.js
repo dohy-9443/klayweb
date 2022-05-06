@@ -65,3 +65,54 @@ export const DIV = styled.div`
   max-width: 1920px;
   margin: 0 auto;
 `;
+
+export const MobileFixbtnContainer = styled.div`
+  display: none;
+  @media only screen and (max-width: 1024px) {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-30%, -30%);
+  }
+`;
+export const FixBtnWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+export const ArrBtn = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+`;
+export const BtnSnsWrap = styled.div`
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translate(0px, -90px);
+  ${(props) => (props.isSnsbtn ? `display:block;` : `display:none;`)}
+  & > ul {
+    flex-direction: column;
+    width: 60px;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+  }
+  & li {
+    width: 60px;
+    height: 60px;
+    margin: 0px 0px 30px 0px;
+  }
+  & li:nth-last-of-type(1) {
+    margin: 0px;
+  }
+`;

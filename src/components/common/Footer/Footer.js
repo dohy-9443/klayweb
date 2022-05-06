@@ -9,7 +9,9 @@ const Footer = () => {
     <>
       <S.Container>
         <S.Wrap>
-          <Sns />
+          <S.SnsWrap>
+            <Sns />
+          </S.SnsWrap>
           <S.TextBox>
             <S.Logo>
               <img src="/assets/img/logo.png" alt="" />

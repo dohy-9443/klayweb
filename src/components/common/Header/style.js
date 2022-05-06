@@ -5,6 +5,9 @@ import { connect } from "../../../utils/ShareStyle";
 export const Container = styled.header`
   width: 100%;
   height: 110px;
+  @media only screen and (max-width: 768px) {
+    height: calc(100vw * (90 / 428));
+  }
 `;
 
 export const Wrap = styled.div`
@@ -15,6 +18,9 @@ export const Wrap = styled.div`
   @media only screen and (max-width: 1500px) {
     padding: 0 calc(100vw * (140 / 1500));
   }
+  @media only screen and (max-width: 768px) {
+    padding: 0 calc(100vw * (20 / 428));
+  }
 `;
 
 export const Inner = styled.div`
@@ -22,11 +28,19 @@ export const Inner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Left = styled.ul`
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    margin: calc(100vw * (45 / 428)) 0px;
+  }
 `;
 
 export const Li = styled.li`
@@ -49,6 +63,9 @@ export const Li = styled.li`
     @media only screen and (max-width: 900px) {
       margin-right: calc(100vw * (40 / 900));
     }
+    @media only screen and (max-width: 768px) {
+      margin-right: calc(100vw * (50 / 428));
+    }
   }
 
   @media only screen and (max-width: 1300px) {
@@ -61,6 +78,9 @@ export const Li = styled.li`
   @media only screen and (max-width: 900px) {
     margin-right: calc(100vw * (40 / 900));
   }
+  @media only screen and (max-width: 768px) {
+    margin-right: calc(100vw * (30 / 428));
+  }
 `;
 
 export const Img = styled.div`
@@ -72,12 +92,21 @@ export const Img = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (30 / 428));
+    height: calc(100vw * (20 / 428));
+  }
 `;
 
 export const Span = styled.span`
   display: block;
   font-weight: 500;
   font-size: 16px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: calc(100vw * (12 / 428));
+  }
 
   ${({ active, disabled }) => {
     if (active) {
@@ -107,11 +136,21 @@ export const Right = styled.div`
   ${connect}
   width: 175px;
   height: 49px;
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (115 / 428));
+    height: calc(100vw * (30 / 428));
+
+    margin-left: auto;
+  }
 `;
 
 export const Btn = styled.div`
   width: 173px;
   height: 47px;
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (113 / 428));
+    height: calc(100vw * (28 / 428));
+  }
 `;
 
 export const WalletId = styled.h2`

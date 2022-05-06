@@ -77,13 +77,28 @@ const MainPage = () => {
     },
   ]);
   const modulesOpt = {
-    speed: 5000,
-    slidesPerView: 4, // 한 슬라이드당 보여줄 slide 갯수
+    speed: 3000,
+    // slidesPerView: 4, // 한 슬라이드당 보여줄 slide 갯수
     loop: true, // 슬라이드 반복 (기본값 false)
     autoplay: {
       //   //자동 재생 5초,
       delay: 0,
       disableOnInteraction: false, //false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
+    breakpoints: {
+      // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
+      360: {
+        slidesPerView: 3,
+      },
+      // 768: {
+      // slidesPerView: 4,
+      // },
+      1000: {
+        slidesPerView: 4,
+      },
+      // 1290: {
+      //   slidesPerView: 5,
+      // },
     },
   };
 
@@ -263,6 +278,7 @@ const MainPage = () => {
       // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
       360: {
         slidesPerView: 3,
+        spaceBetween: 15, // 슬라이드 사이의 간격
       },
       // 768: {
       // slidesPerView: 4,
@@ -330,14 +346,22 @@ const MainPage = () => {
 
   return (
     <Layout>
+      {/* <MobileFixbtnContainer>
+        <FixBtnWrap>
+          <ArrBtn type="button">버튼</ArrBtn>
+        </FixBtnWrap>
+        <BtnSnsWrap>
+          <Sns />
+        </BtnSnsWrap>
+      </MobileFixbtnContainer> */}
       <Container>
         {/* 상단 sns  */}
         <SectionA>
-          <DIV>
+          <SectionADIV>
             <SnsWrapper>
               <Sns />
             </SnsWrapper>
-          </DIV>
+          </SectionADIV>
         </SectionA>
 
         {/* section2  video */}
@@ -345,12 +369,12 @@ const MainPage = () => {
           <FlexDIV>
             <VideoBox>
               <Video
-                noControls
-                muted
-                autoPlay
-                playsInline
-                loop
-                // src="/assets/vedio/main_video.mp4"
+                controls={false}
+                muted={true}
+                autoplay="true"
+                autoPlay={true}
+                playsInline={true}
+                loop={true}
                 src="/assets/vedio/main_video2.mp4"
                 // src="/assets/vedio/main_video_mov.mov"
                 // src="/assets/vedio/main_video_mov.mp4"
@@ -492,6 +516,17 @@ const SecTitle = styled.div`
   text-align: center;
   color: #999999;
   margin-bottom: 118px;
+  @media only screen and (max-width: 768px) {
+    font-size: calc(100vw * (14 / 428));
+    margin-bottom: calc(100vw * (30 / 428));
+  }
+`;
+
+const SectionADIV = styled.div`
+  display: block;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const ListText = styled.div`
@@ -505,6 +540,13 @@ const ListText = styled.div`
   @media only screen and (max-width: 1250px) {
     font-size: calc(100vw * (15 / 1250));
   }
+  @media only screen and (max-width: 768px) {
+    font-size: calc(100vw * (10 / 428));
+    margin: 0 2px;
+    line-height: 3;
+    word-break: keep-all;
+    /* margin-bottom: 0px; */
+  }
 `;
 
 const DIV = styled.div`
@@ -513,6 +555,9 @@ const DIV = styled.div`
 const FlexDIV = styled.div`
   display: flex;
   justify-content: flex-start;
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+  }
 
   ${(props) => (props.column ? `flex-direction: column;` : null)}
 `;
@@ -523,6 +568,12 @@ const FlexDIVA = styled(FlexDIV)`
   margin-top: 9.5%;
   /* margin-left: 220px; */
   margin-left: 11%;
+  @media only screen and (max-width: 768px) {
+    width: 44%;
+    margin-top: 11%;
+    /* margin-left: 5.5%; */
+    margin-left: 4.5%;
+  }
 `;
 const Section = styled.section`
   width: 100%;
@@ -531,16 +582,27 @@ const Section = styled.section`
   @media only screen and (max-width: 1920px) {
     margin-bottom: calc(100vw * (346 / 1920));
   }
+  @media only screen and (max-width: 768px) {
+    margin-bottom: calc(100vw * (120 / 428));
+  }
 `;
 const SectionA = styled(Section)`
   width: 100%;
   margin-bottom: 14px;
 `;
-const SectionB = styled(Section)``;
+const SectionB = styled(Section)`
+  @media only screen and (max-width: 768px) {
+    margin-bottom: calc(100vw * (71 / 428));
+  }
+`;
 const ImgCon = styled.div`
   /* width: 79%; */
   width: calc(100vw * (460 / 1920));
   max-width: 460px;
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (66 / 428));
+    margin-bottom: calc(100vw * (15 / 428));
+  }
   & img {
     width: 100%;
   }
@@ -564,6 +626,9 @@ const TextWrap = styled.div`
   @media only screen and (max-width: 1600px) {
     width: 80%;
   }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
   & p {
     font-family: "Pretendard";
     font-style: normal;
@@ -575,11 +640,22 @@ const TextWrap = styled.div`
     @media only screen and (max-width: 1600px) {
       font-size: calc(100vw * (16 / 1600));
     }
+    @media only screen and (max-width: 768px) {
+      font-size: calc(100vw * (10 / 428));
+      line-height: 2;
+      word-break: keep-all;
+      margin-right: 25px;
+    }
   }
 `;
 const SectionC = styled(Section)``;
 const SectionD = styled(Section)``;
-const SectionE = styled(Section)``;
+const SectionE = styled(Section)`
+  @media only screen and (max-width: 768px) {
+    /* font-size: calc(100vw * (10 / 428)); */
+    margin-bottom: calc(100vw * (40 / 428));
+  }
+`;
 const PerDiv = styled.div`
   width: 100%;
   max-width: 1128px;
@@ -591,6 +667,10 @@ const PerDiv = styled.div`
   @media only screen and (max-width: 1250px) {
     max-width: calc(100vw * (1128 / 1250));
   }
+  @media only screen and (max-width: 768px) {
+    /* font-size: calc(100vw * (10 / 428)); */
+    padding-top: calc(100vw * (30 / 428));
+  }
 `;
 const SectionF = styled(Section)``;
 
@@ -600,6 +680,9 @@ const SnsWrapper = styled.div`
 const VideoBox = styled(DIV)`
   width: 47%;
   margin-left: 10px;
+  @media only screen and (max-width: 768px) {
+    width: 56%;
+  }
 `;
 const Video = styled.video`
   width: 100%;
@@ -631,9 +714,16 @@ const PartImgCon = styled.div`
   & img {
     width: 71%;
     height: 100%;
+    @media only screen and (max-width: 768px) {
+      width: 90%;
+    }
   }
   @media only screen and (max-width: 1920px) {
     height: calc(100vw * (180 / 1920));
+  }
+  @media only screen and (max-width: 768px) {
+    width: 33%;
+    height: calc(100vw * (100 / 428));
   }
 `;
 
@@ -643,9 +733,54 @@ export const Right = styled.div`
   height: 49px;
   text-align: center;
   margin: 161px auto 0 auto;
+  @media only screen and (max-width: 768px) {
+    margin: calc(100vw * (39 / 428)) auto 0 auto;
+  }
 `;
 
 export const Btn = styled.div`
   width: 173px;
   height: 47px;
 `;
+
+// const MobileFixbtnContainer = styled.div`
+//   width: 60px;
+//   height: 60px;
+//   position: fixed;
+//   right: 0px;
+//   bottom: 0px;
+//   transform: translate(-100%, -100%) translate3d(0, 0, 0);
+//   -webkit-transform: translate3d(0, 0, 0);
+//   transform: ;
+// `;
+// const FixBtnWrap = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+// `;
+// const ArrBtn = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   background: red;
+//   border-radius: 50%;
+// `;
+// const BtnSnsWrap = styled.div`
+//   & > ul {
+//     flex-direction: column;
+//     width: 60px;
+//     height: auto;
+//     position: absolute;
+//     bottom: 0px;
+//     left: 0px;
+//     margin: 0px 0px 0px 0px;
+//     transform: translate(0px, -90px);
+//   }
+//   & li {
+//     width: 60px;
+//     height: 60px;
+//     margin: 0px 0px 30px 0px;
+//   }
+//   & li:nth-last-of-type(1) {
+//     margin: 0px;
+//   }
+// `;

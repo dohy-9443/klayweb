@@ -38,6 +38,9 @@ export const connect = css`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background 0.6s;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(100vw * (13 / 428));
+    }
   }
 
   &:hover div {

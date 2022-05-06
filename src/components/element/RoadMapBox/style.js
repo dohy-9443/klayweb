@@ -19,6 +19,11 @@ export const Border = styled.div`
     width: calc(100vw * (343 / 1220));
     height: calc(100vw * (343 / 1220));
   }
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (185 / 428));
+    height: calc(100vw * (185 / 428));
+    margin-bottom: calc(100vw * (80 / 428));
+  }
 `;
 
 export const DIV = styled.div`
@@ -33,6 +38,10 @@ export const DIV = styled.div`
   font-size: 25px;
   font-weight: 600;
   color: #ffffff;
+  @media only screen and (max-width: 768px) {
+    font-size: calc(100vw * (12 / 428));
+    overflow: auto;
+  }
 `;
 
 export const PerText = styled.div`
