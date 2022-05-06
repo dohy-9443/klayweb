@@ -436,7 +436,7 @@ const MainPage = () => {
         >
           <SecTitle>About KLC (Klay LionsCoin)</SecTitle>
           <SecDImgBox>
-            <img src="/assets/img/character/character_1.png" alt="" />
+            <img src="/assets/img/chart.png" alt="" />
           </SecDImgBox>
         </SectionD>
 

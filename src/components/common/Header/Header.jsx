@@ -1,10 +1,11 @@
 //react
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import * as S from "./style";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -18,7 +19,9 @@ const Header = () => {
                 </S.Img>
               </S.Li>
               <S.Li onClick={() => navigate("/")}>
-                <S.Span>MAIN</S.Span>
+                <S.Span active={pathname === "/" || pathname === "/connect"}>
+                  MAIN
+                </S.Span>
               </S.Li>
               <S.Li onClick={() => navigate("/mining")}>
                 <S.Span>KLC</S.Span>
