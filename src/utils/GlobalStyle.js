@@ -71,9 +71,24 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Pretendard";
+    /* @media screen and (max-width:)  */
+    background:#000;
+    
   }
-
   
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+  }
 `;
 
 export default GlobalStyle;
