@@ -44,9 +44,9 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  &:nth-child(5n) > div {
+  /* &:nth-child(5n) > div {
     margin-right: 0;
-  }
+  } */
 `;
 
 export const Bottom = styled.div`

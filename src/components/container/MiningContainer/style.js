@@ -9,7 +9,7 @@ export const Wrap = styled.div`
 `;
 
 export const Inner = styled.div`
-  padding: 0 140px 165px;
+  padding: 0 120px 165px;
   margin-bottom: 165px;
   border-bottom: 1px solid #454545;
 
