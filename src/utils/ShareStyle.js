@@ -39,7 +39,7 @@ export const connect = css`
     -webkit-text-fill-color: transparent;
     transition: background 0.6s;
     @media only screen and (max-width: 768px) {
-      font-size: calc(100vw * (13 / 428));
+      font-size: calc(100vw * (10 / 428));
     }
   }
 

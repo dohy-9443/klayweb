@@ -293,7 +293,8 @@ const MainPage = () => {
   };
 
   const containerStyle = {
-    background: "url('/assets/img/sss.svg') center 85% / 65% 65% no-repeat",
+    background:
+      "url('/assets/img/back_logo.svg') center center / 65% 65% no-repeat",
   };
 
   // section G items
@@ -406,7 +407,7 @@ const MainPage = () => {
           data-aos-delay="100"
           data-aos-duration="2000"
         >
-          <SecTitle>Klay Liones</SecTitle>
+          <SecTitle>Klay Lions</SecTitle>
           <SwDiv>
             <Swipers
               data={imgList}
@@ -436,7 +437,7 @@ const MainPage = () => {
         >
           <SecTitle>About KLC (Klay LionsCoin)</SecTitle>
           <SecDImgBox>
-            <img src="/assets/img/chart.png" alt="" />
+            {/* <img src="/assets/img/chart.png" alt="" /> */}
           </SecDImgBox>
         </SectionD>
 
@@ -611,15 +612,23 @@ const SecDImgBox = styled.div`
   width: 950px;
   height: 950px;
   margin: 0 auto;
-  & img {
+  background: url("/assets/img/chart.png") no-repeat;
+  background-size: contain;
+  /* & img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
+  } */
 
   @media only screen and (max-width: 1250px) {
     width: calc(100vw * (950 / 1250));
     height: calc(100vw * (950 / 1250));
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    background: url("/assets/img/chart_res.svg") no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
 `;
 const TextWrap = styled.div`
@@ -729,18 +738,31 @@ const PartImgCon = styled.div`
 
 export const Right = styled.div`
   ${connect}
-  width: 175px;
+  width: 295px;
   height: 49px;
   text-align: center;
   margin: 161px auto 0 auto;
+  & div span {
+    font-size: 22px;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(100vw * (12 / 428));
+    }
+  }
   @media only screen and (max-width: 768px) {
+    width: calc(100vw * (165 / 428));
+    height: calc(100vw * (34 / 428));
+
     margin: calc(100vw * (39 / 428)) auto 0 auto;
   }
 `;
 
 export const Btn = styled.div`
-  width: 173px;
+  width: 293px;
   height: 47px;
+  @media only screen and (max-width: 768px) {
+    width: calc(100vw * (163 / 428));
+    height: calc(100vw * (32 / 428));
+  }
 `;
 
 // const MobileFixbtnContainer = styled.div`
