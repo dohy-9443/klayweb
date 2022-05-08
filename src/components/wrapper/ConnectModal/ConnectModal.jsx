@@ -80,10 +80,20 @@ function ConnectModal({ onModal, closeModal }) {
         </S.CheckWrap>
       </S.Container>
       <S.BtnGroup>
-        <S.Btn type="button" disabled={isBtn} isActive={isBtn}>
+        <S.Btn
+          type="button"
+          disabled={isBtn}
+          isActive={isBtn}
+          onClick={() => closeModal()}
+        >
           <span>Agree (Disable for 7days)</span>
         </S.Btn>
-        <S.Btn type="button" disabled={isBtn} isActive={isBtn}>
+        <S.Btn
+          type="button"
+          disabled={isBtn}
+          isActive={isBtn}
+          onClick={() => closeModal()}
+        >
           <span>Agree</span>
         </S.Btn>
       </S.BtnGroup>
