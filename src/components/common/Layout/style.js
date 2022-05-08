@@ -24,6 +24,14 @@ export const Container = styled.div`
     opacity: 0.6;
     z-index: 1;
     filter: blur(340px);
+
+    @media only screen and (max-width: 768px) {
+      width: calc(100vw * (200 / 428));
+      height: calc(100vw * (200 / 428));
+      left: -0%;
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 
   &::after {
@@ -43,6 +51,14 @@ export const Container = styled.div`
     opacity: 0.3;
     z-index: 1;
     filter: blur(340px);
+    @media only screen and (max-width: 768px) {
+      width: calc(100vw * (200 / 428));
+      height: calc(100vw * (200 / 428));
+      right: -0%;
+      filter: blur(0px);
+      opacity: 1;
+      bottom: 0;
+    }
   }
 `;
 
