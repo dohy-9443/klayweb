@@ -543,7 +543,7 @@ const ListText = styled.div`
   @media only screen and (max-width: 768px) {
     font-size: calc(100vw * (10 / 428));
     margin: 0 2px;
-    line-height: 3;
+    line-height: 1.8;
     word-break: keep-all;
     /* margin-bottom: 0px; */
   }
@@ -614,7 +614,7 @@ const SecDImgBox = styled.div`
   & img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media only screen and (max-width: 1250px) {
