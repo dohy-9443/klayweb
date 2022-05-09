@@ -376,9 +376,7 @@ const MainPage = () => {
                 autoPlay={true}
                 playsInline={true}
                 loop={true}
-                src="/assets/vedio/main_video2.mp4"
-                // src="/assets/vedio/main_video_mov.mov"
-                // src="/assets/vedio/main_video_mov.mp4"
+                src="/assets/video/main_video2.mp4"
                 type="video/mp4"
               ></Video>
             </VideoBox>
