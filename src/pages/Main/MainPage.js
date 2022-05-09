@@ -272,7 +272,7 @@ const MainPage = () => {
     // slidesPerView: 5, // 한 슬라이드당 보여줄 slide 갯수
     spaceBetween: 50, // 슬라이드 사이의 간격
 
-    loop: true, // 슬라이드 반복 (기본값 false)
+    // loop: true, // 슬라이드 반복 (기본값 false)
 
     breakpoints: {
       // 반응형 브레이크포인트, width값 숫자로 옵션 다르게 적용 가능
@@ -592,8 +592,10 @@ const SectionA = styled(Section)`
   margin-bottom: 14px;
 `;
 const SectionB = styled(Section)`
+  border-bottom: 1px solid #c4c4c4;
   @media only screen and (max-width: 768px) {
     margin-bottom: calc(100vw * (71 / 428));
+    border: none;
   }
 `;
 const ImgCon = styled.div`
@@ -700,6 +702,7 @@ const Video = styled.video`
 const SwDiv = styled.div`
   width: 100%;
   position: relative;
+  cursor: pointer;
   & .swiper-container {
     overflow: unset;
   }
