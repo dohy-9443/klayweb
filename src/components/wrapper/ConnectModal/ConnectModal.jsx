@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 
 import * as S from "./style";
@@ -8,6 +9,8 @@ function ConnectModal({ onModal, closeModal }) {
   const [isCheckA, setIsCheckA] = React.useState(false);
   const [isCheckB, setIsCheckB] = React.useState(false);
   const [isBtn, setIsBtn] = React.useState(true);
+
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (Boolean(isCheckA && isCheckB)) {
@@ -54,7 +57,7 @@ function ConnectModal({ onModal, closeModal }) {
       style={customStyle}
     >
       <S.Container>
-        <S.Close onClick={() => closeModal()}>
+        <S.Close onClick={() => navigate(-1)}>
           <img src="/assets/img/icon/close.svg" alt="" />
         </S.Close>
         <S.H2>Risk & Security</S.H2>

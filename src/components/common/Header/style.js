@@ -52,6 +52,14 @@ export const Li = styled.li`
     margin-right: 0;
   }
 
+  &:nth-last-of-type(1) span {
+    color: var(--gray);
+  }
+
+  &:nth-last-of-type(2) span {
+    color: var(--gray);
+  }
+
   &:nth-of-type(1) {
     margin-right: 140px;
     @media only screen and (max-width: 1300px) {

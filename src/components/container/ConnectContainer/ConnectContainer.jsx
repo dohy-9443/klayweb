@@ -2,17 +2,9 @@ import React from "react";
 
 import * as S from "./style";
 
-import { ConnectModal } from "../../../components";
-
 const ConnectContainer = () => {
-  const [isModalToggle, setIsModalToggle] = React.useState(true);
-
   return (
     <S.Container>
-      <ConnectModal
-        closeModal={() => setIsModalToggle(false)}
-        onModal={isModalToggle}
-      />
       <S.Wrap>
         <S.Inner>
           <div>

@@ -50,7 +50,6 @@ const UnMiningModal = ({ onModal, closeModal }) => {
             <S.Li>
               <S.Text>Text</S.Text>
               <S.Right>
-                <S.RLeft>Text</S.RLeft>
                 <S.RRight>5 NFT</S.RRight>
               </S.Right>
             </S.Li>
