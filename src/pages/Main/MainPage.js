@@ -491,7 +491,7 @@ const MainPage = () => {
             {partnerList?.map((item, index) => {
               return (
                 <PartImgCon key={index}>
-                  <img src={item.src} alt={item.alt} />
+                  {/* <img src={item.src} alt={item.alt} /> */}
                 </PartImgCon>
               );
             })}
@@ -720,6 +720,8 @@ const PartImgCon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #fff;
+  box-sizing: border-box;
   & img {
     width: 71%;
     height: 100%;
