@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
             setIsSnsbtn((val) => !val);
           }}
         >
-          <S.ArrBtn type="button">
+          <S.ArrBtn type="button" isSnsbtn={isSnsbtn}>
             <img src="/assets/img/icon/arr.svg" alt="" />
           </S.ArrBtn>
         </S.FixBtnWrap>

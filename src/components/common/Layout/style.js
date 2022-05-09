@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -110,6 +110,24 @@ export const ArrBtn = styled.div`
   align-items: center;
   margin-right: 30px;
   cursor: pointer;
+
+  ${({ isSnsbtn }) => {
+    if (isSnsbtn) {
+      return css`
+        & img {
+          transition: all 0.3s;
+          transform: rotate(180deg);
+        }
+      `;
+    } else {
+      return css`
+        & img {
+          transition: all 0.3s;
+          transform: rotate(360deg);
+        }
+      `;
+    }
+  }}
 `;
 export const BtnSnsWrap = styled.div`
   position: absolute;

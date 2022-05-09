@@ -609,8 +609,8 @@ const ImgCon = styled.div`
   }
 `;
 const SecDImgBox = styled.div`
-  width: 950px;
-  height: 950px;
+  width: 692px;
+  height: 874px;
   margin: 0 auto;
   background: url("/assets/img/chart.png") no-repeat;
   background-size: contain;
@@ -621,8 +621,8 @@ const SecDImgBox = styled.div`
   } */
 
   @media only screen and (max-width: 1250px) {
-    width: calc(100vw * (950 / 1250));
-    height: calc(100vw * (950 / 1250));
+    width: calc(100vw * (692 / 1250));
+    height: calc(100vw * (874 / 1250));
   }
   @media only screen and (max-width: 768px) {
     width: 100%;
