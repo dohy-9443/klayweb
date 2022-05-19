@@ -2,7 +2,7 @@ import React from "react";
 
 import * as S from "./style";
 
-const StartBox = ({ list, setList, idx, data }) => {
+const StartBox = ({ list, setList, idx, data, lock }) => {
   const { text1, klc, text2 } = data || {};
   return (
     <S.Box>
@@ -24,12 +24,14 @@ const StartBox = ({ list, setList, idx, data }) => {
         )}
       </S.Container>
       <S.TextBox>
-        <S.Text1>{text1}</S.Text1>
+        <S.Text1 lock={lock}>{text1}</S.Text1>
         <S.KLCDiv>
           <S.KLCText>MINED KLC</S.KLCText>
-          <S.KLCIcon>
-            <img src="/assets/img/miniLion.png" alt="" />
-          </S.KLCIcon>
+          {!lock && (
+            <S.KLCIcon>
+              <img src="/assets/img/miniLion.png" alt="" />
+            </S.KLCIcon>
+          )}
           <S.Price>{klc}</S.Price>
         </S.KLCDiv>
         <S.Text2>{text2}</S.Text2>

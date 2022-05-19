@@ -2,7 +2,12 @@ import React from "react";
 
 import * as S from "./style";
 
-import { NotMiningWrap, MiningWrap, ConnectModal } from "../../../components";
+import {
+  NotMiningWrap,
+  MiningWrap,
+  ConnectModal,
+  LockUpWrap,
+} from "../../../components";
 
 const MiningContainer = () => {
   const [isModalToggle, setIsModalToggle] = React.useState(true);
@@ -21,6 +26,11 @@ const MiningContainer = () => {
         <S.Inner>
           <S.DIV>
             <MiningWrap />
+          </S.DIV>
+        </S.Inner>
+        <S.Inner>
+          <S.DIV>
+            <LockUpWrap />
           </S.DIV>
         </S.Inner>
       </S.Wrap>
