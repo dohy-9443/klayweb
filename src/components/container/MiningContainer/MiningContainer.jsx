@@ -2,15 +2,19 @@ import React from "react";
 
 import * as S from "./style";
 
-import { NotMiningWrap, MiningWrap, ConnectModal } from "../../../components";
+import {
+  NotMiningWrap,
+  MiningWrap,
+  ConnectModal,
+  LockUpWrap,
+} from "../../../components";
 import { useStakingNft } from "../../../hooks/staking";
 import { ADDRESSES } from "../../../contants/addresses";
 import { useAddress } from "../../../hooks/web3/web3-context";
 
 const MiningContainer = () => {
-
   const [isModalToggle, setIsModalToggle] = React.useState(false);
-  
+
   React.useEffect(() => {
     if (window.localStorage.getItem("isModalToggle") == "false") {
       setIsModalToggle(false);
@@ -18,8 +22,6 @@ const MiningContainer = () => {
       setIsModalToggle(true);
     }
   }, []);
-
-
 
   const closeModal = (local) => {
     if (local) {
@@ -41,6 +43,11 @@ const MiningContainer = () => {
         <S.Inner>
           <S.DIV>
             <MiningWrap />
+          </S.DIV>
+        </S.Inner>
+        <S.Inner>
+          <S.DIV>
+            <LockUpWrap />
           </S.DIV>
         </S.Inner>
       </S.Wrap>

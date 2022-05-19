@@ -138,3 +138,96 @@ export const miningData2 = [
     text2: "option",
   },
 ];
+
+export const miningData3 = [
+  {
+    id: 1,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 2,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 3,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 4,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 5,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 6,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 7,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 8,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 9,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 10,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 11,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 12,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 13,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 14,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+  {
+    id: 15,
+    isMining: false,
+    isActive: false,
+    text1: "option",
+  },
+];

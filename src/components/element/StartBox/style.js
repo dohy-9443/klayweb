@@ -82,7 +82,7 @@ export const Text1 = styled.p`
   font-weight: 400;
   font-size: 18px;
   color: var(--text);
-  margin-bottom: 5px;
+  margin-bottom: ${(props) => (props.lock ? "10px" : "5px")};
 `;
 
 export const KLCDiv = styled.div`
